@@ -5,3 +5,16 @@ output: github_document
 ---
 
 This is my solution to HW1.
+
+```{r}
+library(tidyverse)
+```
+
+## Problem 1
+
+Create a data frame with specified elements
+
+```{r}
+
+```
+
