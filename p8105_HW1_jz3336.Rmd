@@ -35,3 +35,10 @@ mean(pull(prob1_df, fac_vec))
 
 I can take the mean of numerical and logical variables but not character or factor.
 
+```{r}
+as.numeric(pull(prob1_df, samp))
+as.numeric(pull(prob1_df, logi_vec))
+as.numeric(pull(prob1_df, char_vec))
+as.numeric(pull(prob1_df, fac_vec))
+```
+
