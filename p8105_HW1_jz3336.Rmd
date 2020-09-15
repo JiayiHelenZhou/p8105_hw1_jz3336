@@ -24,3 +24,14 @@ prob1_df =
   )
 ```
 
+Take the mean of each variable in my data frame.
+
+```{r}
+mean(pull(prob1_df, samp))
+mean(pull(prob1_df, logi_vec))
+mean(pull(prob1_df, char_vec))
+mean(pull(prob1_df, fac_vec))
+```
+
+I can take the mean of numerical and logical variables but not character or factor.
+
