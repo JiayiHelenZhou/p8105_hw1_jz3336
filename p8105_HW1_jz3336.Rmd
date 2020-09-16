@@ -61,6 +61,8 @@ In the penguins data set, there are `r ncol(penguins)` variables: `r names(pengu
 
 ```{r}
 ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = as.factor(species))) + geom_point()
+
+ggsave("penguins.png", width = 20, height = 20)
 ```
 
 
