@@ -14,7 +14,7 @@ library(tidyverse)
 
 Create a data frame with specified elements
 
-```{r}
+```{r the_first_data_frame}
 prob1_df = 
   tibble(
     samp = rnorm(10),
@@ -26,7 +26,7 @@ prob1_df =
 
 Take the mean of each variable in my data frame.
 
-```{r}
+```{r taking_the_mean}
 mean(pull(prob1_df, samp))
 mean(pull(prob1_df, logi_vec))
 mean(pull(prob1_df, char_vec))
@@ -35,7 +35,7 @@ mean(pull(prob1_df, fac_vec))
 
 I can take the mean of numerical and logical variables but not character or factor.
 
-```{r}
+```{r convert_vectors_to_numeric}
 as.numeric(pull(prob1_df, samp))
 as.numeric(pull(prob1_df, logi_vec))
 as.numeric(pull(prob1_df, char_vec))
@@ -43,10 +43,19 @@ as.numeric(pull(prob1_df, fac_vec))
 ```
 
 converting logical vector to numeric vector, factor, and first to factor then to numeric.
-```{r}
+```{r changing_logical_vector}
 as.numeric(pull(prob1_df, logi_vec)) * pull(prob1_df, samp)
 as.factor(pull(prob1_df, logi_vec)) * pull(prob1_df, samp)
 as.numeric(as.factor(pull(prob1_df, logi_vec))) * pull(prob1_df, samp)
 ```
 
+## Problem 2
+
+Load the penguins data set.
+
+```{r penguins_data}
+data("penguins", package = "palmerpenguins")
+```
+
+In the penguins data set, there are `r ncol(penguins)` variables: `r names(penguins)`. In total, there are `r nrow(penguins)` sets of data. The mean flipper length of the selected penguins is `r mean(pull(penguins, flipper_length_mm), na.rm = TRUE)` with the unit of mm. 
 
