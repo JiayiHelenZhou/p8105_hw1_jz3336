@@ -59,6 +59,8 @@ data("penguins", package = "palmerpenguins")
 
 In the penguins data set, there are `r ncol(penguins)` variables: `r names(penguins)`. In total, there are `r nrow(penguins)` sets of data. The mean flipper length of the selected penguins is `r mean(pull(penguins, flipper_length_mm), na.rm = TRUE)` with the unit of mm. 
 
+Here is the scatter plot describing the relationship between flipper length (mm) and bill length (mm), and it is colored by penguin species types.
+
 ```{r}
 ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = as.factor(species))) + geom_point()
 
